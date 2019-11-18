@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LoginViewController.setupLoginWithSnapchatButton():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "safeArea">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SceneDelegate.scene(_:openURLContexts:):SceneDelegate.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
