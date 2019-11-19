@@ -19,7 +19,10 @@ class ListBusinessesPresenter: ListBusinessesPresentationLogic {
     func presentFetchedBusinesses(response: ListBusinesses.FetchBusinesses.Response) {
         var displayedBusinesses: [ListBusinesses.FetchBusinesses.ViewModel.DisplayedBusiness] = []
         for business in response.businesses {
-            let subtitle = "\(String(describing: business.location?.city)), \(String(describing: business.location?.state))"
+            var subtitle: String = ""
+            if let city = business.location?.city, let state = business.location?.state {
+                subtitle = "\(city), \(state)"
+            }
             let displayedBusiness = ListBusinesses.FetchBusinesses.ViewModel.DisplayedBusiness(id: business.id, title: business.name, subtitle: subtitle)
             displayedBusinesses.append(displayedBusiness)
         }

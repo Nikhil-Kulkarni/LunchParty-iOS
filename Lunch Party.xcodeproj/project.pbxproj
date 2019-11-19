@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		11157A942383006B00092760 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A932383006B00092760 /* MainTableView.swift */; };
 		11157A96238300BA00092760 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A95238300BA00092760 /* BusinessTableViewCell.swift */; };
+		11157A98238443BE00092760 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 11157A97238443BE00092760 /* style.json */; };
 		1155FBD5237EF82C00FC9154 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FBD4237EF82C00FC9154 /* ViewUtils.swift */; };
 		1155FBD7237EF9D200FC9154 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FBD6237EF9D200FC9154 /* Colors.swift */; };
 		1155FBDC237EFB3700FC9154 /* EmojiViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FBDB237EFB3700FC9154 /* EmojiViewAnimator.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		11157A932383006B00092760 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		11157A95238300BA00092760 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
+		11157A97238443BE00092760 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		1155FBD4237EF82C00FC9154 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		1155FBD6237EF9D200FC9154 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1155FBDB237EFB3700FC9154 /* EmojiViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewAnimator.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				11D28B5C237E53EE00CCF40F /* Assets.xcassets */,
 				11D28B5E237E53EE00CCF40F /* LaunchScreen.storyboard */,
 				11D28B61237E53EE00CCF40F /* Info.plist */,
+				11157A97238443BE00092760 /* style.json */,
 			);
 			path = "Lunch Party";
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				11D28B4D237E53ED00CCF40F /* Frameworks */,
 				11D28B4E237E53ED00CCF40F /* Resources */,
 				E52CC24162115B50A97FC3D9 /* [CP] Embed Pods Frameworks */,
+				6F7725C7D3E5E224F78F9CE9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +310,7 @@
 				11D28B68237E643100CCF40F /* Chewy-Regular.ttf in Resources */,
 				11D28B60237E53EE00CCF40F /* LaunchScreen.storyboard in Resources */,
 				11D28B5D237E53EE00CCF40F /* Assets.xcassets in Resources */,
+				11157A98238443BE00092760 /* style.json in Resources */,
 				11D28B5B237E53ED00CCF40F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +318,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6F7725C7D3E5E224F78F9CE9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lunch Party/Pods-Lunch Party-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lunch Party/Pods-Lunch Party-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lunch Party/Pods-Lunch Party-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9AAA8E10F641AED88F3C3A9E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

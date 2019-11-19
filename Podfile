@@ -11,5 +11,7 @@ target 'Lunch Party' do
   pod 'SwiftyJSON'
   pod 'Amplitude-iOS'
   pod 'SnapSDK'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 end

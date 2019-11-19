@@ -1,6 +1,13 @@
 PODS:
   - Alamofire (4.9.0)
   - Amplitude-iOS (4.8.1)
+  - GoogleMaps (3.4.0):
+    - GoogleMaps/Maps (= 3.4.0)
+  - GoogleMaps/Base (3.4.0)
+  - GoogleMaps/Maps (3.4.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.4.0):
+    - GoogleMaps/Base (= 3.4.0)
   - PINCache (2.3)
   - PINOperation (1.1.2)
   - SDWebImage (5.2.2):
@@ -20,6 +27,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Amplitude-iOS
+  - GoogleMaps
+  - GooglePlaces
   - SDWebImage
   - SnapSDK
   - SwiftyJSON
@@ -28,6 +37,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Amplitude-iOS
+    - GoogleMaps
+    - GooglePlaces
     - PINCache
     - PINOperation
     - SDWebImage
@@ -37,12 +48,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Amplitude-iOS: 6e2a21000b89aaa428a45cd22e56caed5e2360bf
+  GoogleMaps: 67f4a604f80dd6a22d09c2a507a3a395b9f23060
+  GooglePlaces: 7547289e3fffc8980f4a027be99888e29d59b15d
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   SDWebImage: 5fcdb02cc35e05fc35791ec514b191d27189f872
   SnapSDK: e0642fe1b670cfffc45801d31ca36f5c3e07297f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: bcec08277002686deefb5759f6100e17a3733b71
+PODFILE CHECKSUM: 037c1aab9d979ef4f22879224f26d144db7883a8
 
 COCOAPODS: 1.7.5

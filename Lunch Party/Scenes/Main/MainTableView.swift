@@ -19,6 +19,8 @@ class MainTableView: UITableView {
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         separatorStyle = .none
+        backgroundColor = .white
+        showsHorizontalScrollIndicator = false
         
         register(BusinessTableViewCell.self, forCellReuseIdentifier: MainTableView.businessCellReuseIdentifier)
     }
