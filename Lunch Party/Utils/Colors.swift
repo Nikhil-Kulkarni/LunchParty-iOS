@@ -26,4 +26,8 @@ extension UIColor {
         return UIColor(red: 204/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1.0)
     }
     
+    static func appYellow() -> UIColor {
+        return UIColor(red: 255/255.0, green: 202/255.0, blue: 67/255.0, alpha: 1.0)
+    }
+    
 }

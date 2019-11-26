@@ -10,6 +10,7 @@ import Foundation
 
 protocol ListBusinessesPresentationLogic {
     func presentFetchedBusinesses(response: ListBusinesses.FetchBusinesses.Response)
+    func presentBusiness(response: ListBusinesses.FetchBusiness.Response)
 }
 
 class ListBusinessesPresenter: ListBusinessesPresentationLogic {
@@ -28,6 +29,11 @@ class ListBusinessesPresenter: ListBusinessesPresentationLogic {
         }
         let viewModel = ListBusinesses.FetchBusinesses.ViewModel(businesses: displayedBusinesses)
         viewController?.displayFetchedBusinesses(viewModel: viewModel)
+    }
+    
+    func presentBusiness(response: ListBusinesses.FetchBusiness.Response) {
+        let viewModel = ListBusinesses.FetchBusiness.ViewModel(business: response.business)
+        viewController?.displayFetchedBusiness(viewModel: viewModel)
     }
     
 }

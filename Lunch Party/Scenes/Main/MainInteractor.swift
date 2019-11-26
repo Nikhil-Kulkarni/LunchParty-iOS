@@ -15,10 +15,12 @@ protocol ListBusinessesBusinessLogic {
 
 protocol ListBusinessesDataStore {
     var businsesses: [Business]? { get }
+    var businessesMap: [String : Business] { get }
 }
 
 class ListBusinessesInteractor: ListBusinessesBusinessLogic, ListBusinessesDataStore {
     var presenter: ListBusinessesPresentationLogic?
+    var businessesMap: [String : Business] = [:]
     
     var worker = BusinessesWorker(api: YelpApi())
     var businsesses: [Business]?
@@ -28,6 +30,9 @@ class ListBusinessesInteractor: ListBusinessesBusinessLogic, ListBusinessesDataS
             switch response {
             case .Success(let result):
                 self.businsesses = result
+                for business in result {
+                    self.businessesMap[business.id] = business
+                }
                 let response = ListBusinesses.FetchBusinesses.Response(businesses: result)
                 self.presenter?.presentFetchedBusinesses(response: response)
             case .Error:

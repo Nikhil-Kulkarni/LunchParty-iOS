@@ -10,6 +10,9 @@
 		11157A942383006B00092760 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A932383006B00092760 /* MainTableView.swift */; };
 		11157A96238300BA00092760 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A95238300BA00092760 /* BusinessTableViewCell.swift */; };
 		11157A98238443BE00092760 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 11157A97238443BE00092760 /* style.json */; };
+		11157A9A2384FEF500092760 /* MainContentContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A992384FEF500092760 /* MainContentContainerView.swift */; };
+		11157A9C2384FF5A00092760 /* MainDetailContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A9B2384FF5A00092760 /* MainDetailContainerView.swift */; };
+		11157A9E238636E900092760 /* ShareStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11157A9D238636E900092760 /* ShareStickerView.swift */; };
 		1155FBD5237EF82C00FC9154 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FBD4237EF82C00FC9154 /* ViewUtils.swift */; };
 		1155FBD7237EF9D200FC9154 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FBD6237EF9D200FC9154 /* Colors.swift */; };
 		1155FBDC237EFB3700FC9154 /* EmojiViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FBDB237EFB3700FC9154 /* EmojiViewAnimator.swift */; };
@@ -42,6 +45,9 @@
 		11157A932383006B00092760 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		11157A95238300BA00092760 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		11157A97238443BE00092760 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		11157A992384FEF500092760 /* MainContentContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentContainerView.swift; sourceTree = "<group>"; };
+		11157A9B2384FF5A00092760 /* MainDetailContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailContainerView.swift; sourceTree = "<group>"; };
+		11157A9D238636E900092760 /* ShareStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareStickerView.swift; sourceTree = "<group>"; };
 		1155FBD4237EF82C00FC9154 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		1155FBD6237EF9D200FC9154 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1155FBDB237EFB3700FC9154 /* EmojiViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewAnimator.swift; sourceTree = "<group>"; };
@@ -225,6 +231,9 @@
 				1192F1E82382638100310106 /* MainModels.swift */,
 				11157A932383006B00092760 /* MainTableView.swift */,
 				11157A95238300BA00092760 /* BusinessTableViewCell.swift */,
+				11157A992384FEF500092760 /* MainContentContainerView.swift */,
+				11157A9B2384FF5A00092760 /* MainDetailContainerView.swift */,
+				11157A9D238636E900092760 /* ShareStickerView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -391,6 +400,7 @@
 				1155FBD7237EF9D200FC9154 /* Colors.swift in Sources */,
 				11E9971423806E2E0098881A /* MainViewController.swift in Sources */,
 				11D28B6F237E675F00CCF40F /* ButtonWithIcon.swift in Sources */,
+				11157A9E238636E900092760 /* ShareStickerView.swift in Sources */,
 				11157A942383006B00092760 /* MainTableView.swift in Sources */,
 				11D28B58237E53ED00CCF40F /* LoginViewController.swift in Sources */,
 				1192F1E123824C2C00310106 /* TextField.swift in Sources */,
@@ -403,7 +413,9 @@
 				11157A96238300BA00092760 /* BusinessTableViewCell.swift in Sources */,
 				11E9970E23806CE90098881A /* LogoViewController.swift in Sources */,
 				11D28B54237E53ED00CCF40F /* AppDelegate.swift in Sources */,
+				11157A9C2384FF5A00092760 /* MainDetailContainerView.swift in Sources */,
 				11D28B56237E53ED00CCF40F /* SceneDelegate.swift in Sources */,
+				11157A9A2384FEF500092760 /* MainContentContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

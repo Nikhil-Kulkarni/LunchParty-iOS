@@ -27,4 +27,22 @@ enum ListBusinesses {
             var businesses: [DisplayedBusiness]
         }
     }
+    enum FetchBusiness {
+        struct Request {
+            var businessId: String
+        }
+        struct Response {
+            var business: Business
+        }
+        struct ViewModel {
+            struct DisplayedBusiness {
+                var id: String
+                var name: String
+                var price: String
+                var rating: Int
+                var imageUrl: String
+            }
+            var business: Business
+        }
+    }
 }

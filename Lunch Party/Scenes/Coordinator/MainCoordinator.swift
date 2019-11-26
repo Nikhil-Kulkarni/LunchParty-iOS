@@ -60,6 +60,7 @@ class MainCoordinator: Coordinator {
         let vc = MainViewController()
         self.navigationController.pushViewController(vc, animated: false)
         self.navigationController.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationController.navigationBar.barStyle = .black
     }
     
 }
