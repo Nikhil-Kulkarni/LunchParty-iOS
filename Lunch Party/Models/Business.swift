@@ -13,7 +13,7 @@ import SwiftyJSON
 class Business: NSObject {
     
     var id: String!
-    var rating: Int!
+    var rating: Float!
     var price: String!
     var phone: String!
     var reviewCount: Int!
@@ -26,7 +26,7 @@ class Business: NSObject {
     
     init(json: [String: JSON]) {
         self.id = json["id"]?.stringValue
-        self.rating = json["rating"]?.intValue
+        self.rating = json["rating"]?.floatValue
         self.price = json["price"]?.stringValue
         self.phone = json["display_phone"]?.stringValue
         self.reviewCount = json["review_count"]?.intValue

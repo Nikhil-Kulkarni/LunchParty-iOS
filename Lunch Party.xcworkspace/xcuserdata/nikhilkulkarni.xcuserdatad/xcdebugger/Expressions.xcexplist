@@ -3,10 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "LoginViewController.setupLoginWithSnapchatButton():LoginViewController.swift">
+         contextName = "SceneDelegate.scene(_:openURLContexts:):SceneDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Business.init(json:):Business.swift">
          <PersistentStrings>
             <PersistentString
-               value = "safeArea">
+               value = "json[&quot;rating&quot;]?.floatValue">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -19,7 +22,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SceneDelegate.scene(_:openURLContexts:):SceneDelegate.swift">
+         contextName = "LoginViewController.setupLoginWithSnapchatButton():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "safeArea">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

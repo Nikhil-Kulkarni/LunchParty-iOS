@@ -53,6 +53,7 @@ class MainContentContainerView: UIView {
     func displayFetchedBusinesses(viewModel: ListBusinesses.FetchBusinesses.ViewModel) {
         self.businesses = viewModel.businesses
         self.tableView.reloadData()
+        self.tableView.stopLoadingAnimation()
     }
     
     private func setupMainLabel() {
@@ -105,6 +106,7 @@ class MainContentContainerView: UIView {
     @objc private func textFieldTextDidChange(_ textField: UITextField) {
         guard let searchTerm = textField.text else { return }
         if !searchTerm.isEmpty {
+            tableView.startLoadingAnimation()
             state = .Search
             if let location = locationManager.location?.coordinate {
                 let request = ListBusinesses.FetchBusinesses.Request(searchTerm: searchTerm, coordinates: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))

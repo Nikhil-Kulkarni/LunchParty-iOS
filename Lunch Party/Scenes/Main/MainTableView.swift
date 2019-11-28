@@ -8,9 +8,13 @@
 
 import UIKit
 
+private let kActivityIndicatorSize: CGFloat = 60.0
+
 class MainTableView: UITableView {
     
     static let businessCellReuseIdentifier = "BusinessCellReuseIdentifier"
+    
+    private var activityIndicator: UIActivityIndicatorView!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -23,6 +27,21 @@ class MainTableView: UITableView {
         showsHorizontalScrollIndicator = false
         
         register(BusinessTableViewCell.self, forCellReuseIdentifier: MainTableView.businessCellReuseIdentifier)
+        let frame = CGRect(x: width() / 2 - kActivityIndicatorSize / 2, y: height() / 2 - kActivityIndicatorSize / 2, width: kActivityIndicatorSize, height: kActivityIndicatorSize)
+        activityIndicator = UIActivityIndicatorView(frame: frame)
+        activityIndicator.color = .appGray()
+        activityIndicator.isHidden = true
+        addSubview(activityIndicator)
+    }
+    
+    func startLoadingAnimation() {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+    }
+    
+    func stopLoadingAnimation() {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
     
 }

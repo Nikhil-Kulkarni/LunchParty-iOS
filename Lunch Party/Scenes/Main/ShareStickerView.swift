@@ -9,7 +9,7 @@
 import UIKit
 
 private let kContainerCornerRadius: CGFloat = 10.0
-private let kProfileSize: CGFloat = 65.0
+let kStickerProfileSize: CGFloat = 65.0
 private let kTitleFieldTopPadding: CGFloat = 12.0
 private let kTitleFieldTextSize: CGFloat = 24.0
 private let kTitleFieldHeight: CGFloat = 28.0
@@ -37,6 +37,7 @@ class ShareStickerView: UIView {
     private var thumbnail: UIImageView!
     private var upArrow: UIImageView!
     private var swipeUpLabel: UILabel!
+    private var subtitleContainer: UIView!
     private var business: Business?
     
     required init?(coder: NSCoder) {
@@ -61,7 +62,29 @@ class ShareStickerView: UIView {
         if let name = business.name {
             titleTextField.text = "Eat @\(name)?"
         }
-        subtitleLabel.text = business.price
+        
+        let subtitleString: NSMutableAttributedString = NSMutableAttributedString(string: "")
+        if let price = business.price {
+            let priceString = NSMutableAttributedString(string: price)
+            priceString.setColor(color: .appYellow(), forText: price)
+            subtitleString.append(priceString)
+        }
+        
+        if let rating = business.rating {
+            if let reviewCount = business.reviewCount {
+                if reviewCount != 0 {
+                    let ratingString = NSMutableAttributedString(string: " \(rating) ⭐")
+                    let reviewCountString = NSMutableAttributedString(string: "(\(reviewCount))")
+                    
+                    ratingString.setColor(color: .black, forText: "\(rating)")
+                    reviewCountString.setColor(color: .appGray(), forText: "(\(reviewCount))")
+                    
+                    subtitleString.append(ratingString)
+                    subtitleString.append(reviewCountString)
+                }
+            }
+        }
+        subtitleLabel.attributedText = subtitleString
         
         if let imageUrl = business.imageUrl {
             thumbnail.sd_setImage(with: URL(string: imageUrl), completed: nil)
@@ -69,7 +92,7 @@ class ShareStickerView: UIView {
     }
     
     private func setupContainerView() {
-        containerView = UIView(frame: CGRect(x: 0, y: 0, width: width(), height: height()))
+        containerView = UIView(frame: CGRect(x: 0, y: kStickerProfileSize / 2, width: width(), height: height() - kStickerProfileSize / 2))
         containerView.backgroundColor = .white
         containerView.roundCorners(.allCorners, radius: kContainerCornerRadius)
         containerView.dropShadow(color: UIColor.black, opacity: 0.15, offSet: CGSize(width: 4.0, height: 4.0), radius: kContainerCornerRadius, scale: true)
@@ -77,7 +100,7 @@ class ShareStickerView: UIView {
     }
     
     private func setupProfileImage() {
-        let frame = CGRect(x: width() / 2 - kProfileSize / 2, y: -kProfileSize / 2, width: kProfileSize, height: kProfileSize)
+        let frame = CGRect(x: width() / 2 - kStickerProfileSize / 2, y: -kStickerProfileSize / 2, width: kStickerProfileSize, height: kStickerProfileSize)
         profileImageView = UIImageView(frame: frame)
         guard let url = profileImageUrl else { return }
         profileImageView.sd_setImage(with: URL(string: url), completed: nil)
@@ -110,6 +133,7 @@ class ShareStickerView: UIView {
         let frame = CGRect(x: kImageSidePadding, y: subtitleLabel.maxY() + kImageTopPadding, width: width, height: kImageHeight)
         thumbnail = UIImageView(frame: frame)
         thumbnail.roundCorners(.allCorners, radius: kImageCornerRadius)
+        thumbnail.contentMode = .scaleAspectFill
         containerView.addSubview(thumbnail)
     }
     
@@ -130,4 +154,13 @@ class ShareStickerView: UIView {
         containerView.addSubview(swipeUpLabel)
     }
     
+}
+
+extension NSMutableAttributedString {
+
+    func setColor(color: UIColor, forText stringValue: String) {
+       let range: NSRange = self.mutableString.range(of: stringValue, options: .caseInsensitive)
+        self.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+    }
+
 }
